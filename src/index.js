@@ -1,13 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { ApolloClient } from 'apollo-client';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { HttpLink } from 'apollo-link-http';
+import { ApolloProvider } from '@apollo/react-hooks';
+
+const GITHUB_BASE_URL = 'https://api.github.com/graphql';
+
+const cache = new InMemoryCache();
+const link = new HttpLink({
+  uri: GITHUB_BASE_URL,
+  headers:{
+    authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
+  }
+})
+
+const client = new ApolloClient({
+  cache,
+  link
+})
+
 ReactDOM.render(
-  <React.StrictMode>
+  <ApolloProvider client={client}>
     <App />
-  </React.StrictMode>,
+  </ApolloProvider>,
   document.getElementById('root')
 );
 

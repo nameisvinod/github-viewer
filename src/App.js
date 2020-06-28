@@ -1,23 +1,44 @@
-import React from 'react';
+import React,{ useState }  from 'react';
 import './App.css';
-import { useQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/react-hooks';
 import FETCH_USER_QUERY from "./Queries/FetchUserQuery";
 
-function App() {
-  const { data, loading, error } = useQuery(FETCH_USER_QUERY, {
-    variables: {
-      user_name:'shawn', 
-      number_of_repos: 100
+import Header from './components/layouts/Header';
+import Footer from './components/layouts/Footer';
+import SearchUser from './components/SearchUser';
+
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+import Profile from './components/Profile';
+
+function App(){
+
+  const [user, setUser] = useState({name:"vinod"});
+  const[getUser] = useLazyQuery(FETCH_USER_QUERY,{
+    onCompleted: data=>{
+      setUser(data.user)
+    },
+    onError: ({ graphQLErrors, networkError }) => {
+      if (graphQLErrors) {
+        if (graphQLErrors.length > 0) console.log(graphQLErrors[0].message, 'error');
+      } else if (networkError) {
+        console.log('Please check your network connection!', 'error');
+      }
     }
   });
-  if(loading) return <p>Loading .... </p>
-  if(error) return <p>Failed to load</p>
-
-  console.log(data);
-
   return (
     <div className="App">
-      <p>{data.user.login}</p>
+      <section className="section min-height-100 flex-column space-between padding-bottom-0">
+        <Header/>
+        <SearchUser onSubmit = {(username)=> getUser({
+          variables:{
+            username, 
+            numberofrepos: 100 
+          }
+        })}
+        />
+        <Profile user={user}/>
+        <Footer/>
+      </section>
     </div>
   );
 }

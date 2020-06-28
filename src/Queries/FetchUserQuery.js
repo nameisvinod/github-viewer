@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-const FETCH_USER_QUERY = gql `query ($number_of_repos: Int!, $user_name: String!) {
-    user(login: $user_name) {
+const FETCH_USER_QUERY = gql `query ($numberofrepos: Int!, $username: String!) {
+    user(login: $username) {
       login
       name
       avatarUrl
@@ -11,7 +11,7 @@ const FETCH_USER_QUERY = gql `query ($number_of_repos: Int!, $user_name: String!
       following {
         totalCount
       }
-      repositories(ownerAffiliations: [OWNER], last: $number_of_repos, orderBy: {field: STARGAZERS, direction: DESC}) {
+      repositories(ownerAffiliations: [OWNER], last: $numberofrepos, orderBy: {field: STARGAZERS, direction: DESC}) {
         totalCount
         nodes {
           diskUsage

@@ -13,6 +13,7 @@
     "graphql-tag": "^2.10.3",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
+    "react-bulma-components": "^3.3.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },

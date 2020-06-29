@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
+import ProfileCard from './ProfileCard'
 
-export default class Profile extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.user.name}
-            </div>
-        )
-    }
+export default function Profile({user}) {
+    return (
+        <div>
+            <ProfileCard user={user}/>
+        </div>
+    )
 }

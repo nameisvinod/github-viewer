@@ -17,7 +17,7 @@ export default class SearchUser extends Component {
     render() {
         return (
             <div className="container">
-                <div className="is-flex input-container margin-bottom is-vcentered ">
+                <div className="column is-flex input-container is-vcentered is-one-third">
                     <form onSubmit={this.onSubmit} className="align-items-center">
                         <div className="field has-addons has-addons-centered">
                             <div className="control has-icons-left">

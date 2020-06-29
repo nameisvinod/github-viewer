@@ -4,7 +4,10 @@ const FETCH_USER_QUERY = gql `query ($numberofrepos: Int!, $username: String!) {
     user(login: $username) {
       login
       name
+      bio
+      url
       avatarUrl
+      updatedAt
       followers {
         totalCount
       }

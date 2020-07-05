@@ -1,7 +1,7 @@
 This is a react app created to view github profile with the help of github graphql api
 
 
-##TODO
+## TODO
 
 * Implement Recent searchs
 * Implement filter repo

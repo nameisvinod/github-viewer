@@ -17,7 +17,8 @@ export default class SearchUser extends Component {
     render() {
         return (
             <div className="container">
-                <div className="column is-flex input-container is-vcentered is-one-third">
+                <div className="columns is-centered">
+                <div className="column input-container is-half">
                     <form onSubmit={this.onSubmit} className="align-items-center">
                         <div className="field has-addons has-addons-centered">
                             <div className="control has-icons-left">
@@ -36,7 +37,7 @@ export default class SearchUser extends Component {
                             </button>
                         </div>
                     </form>
-                    
+                </div>
                 </div>
             </div>
         )

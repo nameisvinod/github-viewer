@@ -1,7 +1,7 @@
 import React,{ useState }  from 'react';
 import './App.css';
 import { useLazyQuery } from '@apollo/react-hooks';
-import FETCH_USER_QUERY from "./Queries/FetchUserQuery";
+import FETCH_USER_QUERY from "./queries/FetchUserQuery";
 
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
@@ -10,9 +10,11 @@ import SearchUser from './components/SearchUser';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import Profile from './components/Profile';
 
+import data from './data/data.json'
+
 function App(){
 
-  const [user, setUser] = useState({name:"vinod"});
+  const [user, setUser] = useState(null);
   const[getUser] = useLazyQuery(FETCH_USER_QUERY,{
     onCompleted: data=>{
       setUser(data.user)
@@ -37,6 +39,7 @@ function App(){
         })}
         />
         <Profile user={user}/>
+        {/* <Profile user={data} /> */}
         <Footer/>
       </section>
     </div>

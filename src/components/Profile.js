@@ -24,7 +24,7 @@ export default function Profile({user}) {
             </div>
             <div className="container box">
                 <h2 className="title is-2 has-text-left">Repos</h2>
-                <RepoTable repos={user.repositories.nodes}/>
+                <RepoTable repos={user.repositories.nodes} key={user.login} />
             </div>
         </React.Fragment>
     )

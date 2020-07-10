@@ -6,6 +6,7 @@ export default class RepoRows extends Component {
         return this.props.repos.map((repo) => ( <
             RepoRow key = { repo.name }
             repo = { repo }
+            sortColumn = { this.props.sortColumn }
             />
         ))
     }

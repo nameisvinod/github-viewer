@@ -9,7 +9,7 @@ import Profile from "./components/Profile";
 import UserNotFound from "./components/UserNotFound";
 import { useHistory } from "react-router-dom";
 
-import data from "./data/data.json";
+// import data from "./data/data.json";
 
 function Main({ userData }) {
   console.log(userData);

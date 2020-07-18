@@ -44,3 +44,22 @@ th {
 .profile-card {
     margin-bottom: 1.5rem !important;
 }
+
+.link-button {
+    cursor: pointer;
+    border-radius: 2px;
+    color: #4a4a4a;
+    display: block;
+    background-color: transparent;
+    padding: 0.5em 0.75em;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+.link-button:hover,
+.link-button:focus {
+    outline: none;
+    text-decoration: none;
+    background-color: #eee;
+}

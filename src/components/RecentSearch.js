@@ -35,8 +35,8 @@ class RecentSearchTag extends Component {
     const { login, lastFetch } = this.props.recentSearch;
     return (
       <li onClick={this.onClick}>
-        <a
-          className="is-size-5 is-relative"
+        <button
+          className="is-size-5 is-relative link-button"
           style={getSelectedUserStyle(login, this.props.currentUser)}
         >
           <span className="login">{login}</span>
@@ -44,7 +44,7 @@ class RecentSearchTag extends Component {
             <br />
             Last Fetched @ {lastFetch}
           </span>
-        </a>
+        </button>
       </li>
     );
   }

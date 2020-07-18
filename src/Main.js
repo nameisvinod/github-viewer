@@ -12,7 +12,6 @@ import { useHistory } from "react-router-dom";
 // import data from "./data/data.json";
 
 function Main({ userData }) {
-  console.log(userData);
   const history = useHistory();
   const [userNotFound, setUserNotFound] = useState(false);
   let [recentSearches, setRecentSearches] = useState([]);
@@ -41,7 +40,6 @@ function Main({ userData }) {
   });
 
   const updateRecentSearch = (userName) => {
-    console.log(recentSearches.length);
     recentSearches = recentSearches.filter((search) => {
       return search.login !== userName;
     });
@@ -64,7 +62,7 @@ function Main({ userData }) {
     <div className="App">
       <section className="section min-height-100 flex-column space-between padding-bottom-0">
         <Header />
-        <ProfileSearch isLoading={isLoading} onSubmit={fetchUserData} />
+        <ProfileSearch isLoading={isLoading} onSubmit={fetchUserData} />{" "}
         {userNotFound ? (
           <UserNotFound />
         ) : (
@@ -74,7 +72,6 @@ function Main({ userData }) {
             getUser={fetchUserData}
           />
         )}
-        {/* <Profile user={data} recentSearches={recentSearches} /> */}
         <Footer />
       </section>
     </div>

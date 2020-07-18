@@ -25,7 +25,7 @@ const FETCH_USER_QUERY = gql `query ($numberofrepos: Int!, $username: String!) {
       issues{
         totalCount
       }
-      repositories(first: $numberofrepos, orderBy: {field: STARGAZERS, direction: DESC}) {
+      repositories(ownerAffiliations:[OWNER],first: $numberofrepos, orderBy: {field: STARGAZERS, direction: DESC}) {
         totalCount
         nodes {
           diskUsage

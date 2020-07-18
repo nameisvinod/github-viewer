@@ -20,7 +20,9 @@ export default class RepoRow extends Component {
     } = this.props.repo;
     return (
       <tr>
-        <td className={this.getSortClass("name")}>{name}</td>
+        <td className={this.getSortClass("name")}>
+          <strong>{name}</strong>
+        </td>
         <td>
           <a target="_blank" rel="noopener noreferrer" href={url}>
             <i className="fab fa-github"></i>

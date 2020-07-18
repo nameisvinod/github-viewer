@@ -73,17 +73,12 @@ const createUserStats = (user) => {
         }]
     }
 
-    const numbers = [5, 10, 15];
-    const total = numbers.reduce((accumulator, item) => {
-        return accumulator + item;
-    }, 0)
-
     const starredRepo = user.repositories.nodes.filter((repo) => {
-        return repo.stargazers.totalCount != 0
+        return repo.stargazers.totalCount !== 0
     })
 
     const forkedRepo = user.repositories.nodes.filter((repo) => {
-        return repo.forkCount != 0
+        return repo.forkCount !== 0
     })
 
     returnData.datasets[0].data.push(user.repositories.totalCount)

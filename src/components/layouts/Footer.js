@@ -2,22 +2,42 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="footer has-background-white">
-      <p className="content has-text-centered">
+    <div className="footer margin-top has-background-white">
+      <p className="has-text-centered">
         Created by{" "}
-        <a target="_blank" href="https://github.com/nameisvinod">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/nameisvinod"
+        >
           Vinod Kumar S
         </a>{" "}
-        with{" "}
-        <a target="_blank" href="https://reactjs.org/">
+        using{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://reactjs.org/"
+        >
           React
         </a>{" "}
         +{" "}
-        <a target="_blank" href="https://bulma.io/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.chartjs.org/"
+        >
+          Chart.js
+        </a>{" "}
+        +{" "}
+        <a target="_blank" rel="noopener noreferrer" href="https://bulma.io/">
           Bulma
         </a>{" "}
         +{" "}
-        <a target="_blank" href="https://docs.github.com/en/graphql">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://docs.github.com/en/graphql"
+        >
           Github GraphQL API
         </a>
       </p>

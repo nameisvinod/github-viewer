@@ -40,3 +40,7 @@
 th {
     cursor: pointer;
 }
+
+.profile-card {
+    margin-bottom: 1.5rem !important;
+}

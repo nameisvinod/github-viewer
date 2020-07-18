@@ -31,7 +31,7 @@ export default class RepoTable extends Component {
       return {
         name: repo.name,
         url: repo.url,
-        size: repo.diskUsage,
+        size: !repo.diskUsage ? 0 : repo.diskUsage,
         created: repo.createdAt,
         updated: repo.updatedAt,
         forks: repo.forkCount,

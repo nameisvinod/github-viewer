@@ -36,7 +36,7 @@ export default class ProfileSearch extends Component {
                     <i className="fas fa-user"> </i>{" "}
                   </span>{" "}
                 </div>{" "}
-                <button className="button is-primary" type="submit">
+                <button className="button is-info" type="submit">
                   Search{" "}
                 </button>{" "}
               </div>{" "}

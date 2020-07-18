@@ -10,7 +10,7 @@ function Footer() {
           rel="noopener noreferrer"
           href="https://github.com/nameisvinod"
         >
-          Vinod Kumar S
+          Vinod Kumar S{" "}
         </a>{" "}
         using{" "}
         <a
@@ -18,7 +18,7 @@ function Footer() {
           rel="noopener noreferrer"
           href="https://reactjs.org/"
         >
-          React
+          React{" "}
         </a>{" "}
         +{" "}
         <a
@@ -26,11 +26,11 @@ function Footer() {
           rel="noopener noreferrer"
           href="https://www.chartjs.org/"
         >
-          Chart.js
+          Chart.js{" "}
         </a>{" "}
         +{" "}
         <a target="_blank" rel="noopener noreferrer" href="https://bulma.io/">
-          Bulma
+          Bulma{" "}
         </a>{" "}
         +{" "}
         <a
@@ -38,9 +38,17 @@ function Footer() {
           rel="noopener noreferrer"
           href="https://docs.github.com/en/graphql"
         >
-          Github GraphQL API
+          Github GraphQL API.{" "}
         </a>
-      </p>
+        Check code{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/nameisvinod/github-viewer"
+        >
+          here{" "}
+        </a>{" "}
+      </p>{" "}
     </div>
   );
 }

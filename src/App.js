@@ -8,10 +8,6 @@ import "./App.css";
 
 import Main from "./Main";
 
-// function User({ name }) {
-//   return <div>{name}</div>;
-// }
-
 function useSearchQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -28,9 +24,7 @@ function QueryScreen() {
   });
   if (loading) return null;
   if (error) return `Error! ${error}`;
-  console.log(data);
   let userData = data ? data.user : null;
-  console.log(userData);
   return <Main userData={userData} />;
 }
 function App() {

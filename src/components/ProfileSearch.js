@@ -9,10 +9,8 @@ export default class ProfileSearch extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    console.log(this.props.isLoading);
   };
   onSubmit = (e) => {
-    console.log("requesting....");
     // this.props.isLoading = true;
     e.preventDefault();
     if (this.state.username !== "") this.props.onSubmit(this.state.username);

@@ -87,55 +87,57 @@ export default class RepoTable extends Component {
     return (
       <React.Fragment>
         <RepoFilter onChange={this.filterRepo} />
-        <table className="table is-fullwidth">
-          <thead>
-            <tr>
-              <th onClick={this.sort.bind(this, "name")}>
-                {" "}
-                Name <i className="fas fa-sort"></i>
-              </th>
-              <th name="link">Link</th>
-              <th onClick={this.sort.bind(this, "size")}>
-                {" "}
-                Size (KB) <i className="fas fa-sort"></i>
-              </th>
-              <th onClick={this.sort.bind(this, "stars")}>
-                {" "}
-                Stars <i className="fas fa-sort"></i>
-              </th>
-              <th onClick={this.sort.bind(this, "forks")}>
-                {" "}
-                Forks <i className="fas fa-sort"></i>
-              </th>
-              <th onClick={this.sort.bind(this, "issues")}>
-                {" "}
-                Issues <i className="fas fa-sort"></i>
-              </th>
-              <th onClick={this.sort.bind(this, "watchers")}>
-                {" "}
-                Watchers <i className="fas fa-sort"></i>
-              </th>
-              <th onClick={this.sort.bind(this, "language")}>
-                {" "}
-                Language <i className="fas fa-sort"></i>
-              </th>
-              <th onClick={this.sort.bind(this, "created")}>
-                {" "}
-                created <i className="fas fa-sort"></i>
-              </th>
-              <th onClick={this.sort.bind(this, "updated")}>
-                {" "}
-                Updated <i className="fas fa-sort"></i>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <RepoRows
-              repos={this.state.filteredRepoData}
-              sortColumn={this.state.sortSettings.column}
-            />
-          </tbody>
-        </table>
+        <div className="table-container">
+          <table className="table is-fullwidth">
+            <thead>
+              <tr>
+                <th onClick={this.sort.bind(this, "name")}>
+                  {" "}
+                  Name <i className="fas fa-sort"></i>
+                </th>
+                <th name="link">Link</th>
+                <th onClick={this.sort.bind(this, "size")}>
+                  {" "}
+                  Size (KB) <i className="fas fa-sort"></i>
+                </th>
+                <th onClick={this.sort.bind(this, "stars")}>
+                  {" "}
+                  Stars <i className="fas fa-sort"></i>
+                </th>
+                <th onClick={this.sort.bind(this, "forks")}>
+                  {" "}
+                  Forks <i className="fas fa-sort"></i>
+                </th>
+                <th onClick={this.sort.bind(this, "issues")}>
+                  {" "}
+                  Issues <i className="fas fa-sort"></i>
+                </th>
+                <th onClick={this.sort.bind(this, "watchers")}>
+                  {" "}
+                  Watchers <i className="fas fa-sort"></i>
+                </th>
+                <th onClick={this.sort.bind(this, "language")}>
+                  {" "}
+                  Language <i className="fas fa-sort"></i>
+                </th>
+                <th onClick={this.sort.bind(this, "created")}>
+                  {" "}
+                  created <i className="fas fa-sort"></i>
+                </th>
+                <th onClick={this.sort.bind(this, "updated")}>
+                  {" "}
+                  Updated <i className="fas fa-sort"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <RepoRows
+                repos={this.state.filteredRepoData}
+                sortColumn={this.state.sortSettings.column}
+              />
+            </tbody>
+          </table>
+        </div>
       </React.Fragment>
     );
   }

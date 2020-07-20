@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import StarRepo from "./StarRepo";
 
 export default class ProfileSearch extends Component {
   state = {
@@ -39,6 +40,7 @@ export default class ProfileSearch extends Component {
                 <button className="button is-info" type="submit">
                   Search{" "}
                 </button>{" "}
+                <StarRepo />
               </div>{" "}
             </form>{" "}
           </div>{" "}

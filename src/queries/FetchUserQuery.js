@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-const FETCH_USER_QUERY = gql `query ($numberofrepos: Int!, $username: String!) {
+const FETCH_USER_QUERY = gql `query fetchUser($numberofrepos: Int!, $username: String!) {
     user(login: $username) {
       login
       name

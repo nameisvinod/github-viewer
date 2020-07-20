@@ -8,6 +8,7 @@ export default class StarRepo extends Component {
         <span className="icon" data-tooltip="Star this repo">
           <a
             href="https://github.com/nameisvinod/github-viewer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <i className="far fa-star" style={starStyle}></i>

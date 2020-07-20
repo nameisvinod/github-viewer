@@ -2,11 +2,10 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/nameisvinod/github-viewer/blob/master/LICENSE)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://githubprofileviewer.netlify.app/?u=nameisvinod)
-
-<!-- ![GitHub stars](https://img.shields.io/github/stars/nameisvinod/github-viewer?style=plastic) -->
-
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![made-with-python](https://img.shields.io/badge/Made%20with-React-1f425f.svg)](https://reactjs.org/)
+
+<!-- ![GitHub stars](https://img.shields.io/github/stars/nameisvinod/github-viewer?style=plastic) -->
 
 ## About
 
